@@ -25,5 +25,9 @@ public class AdController {
 		resultRows.setRows(list);
 		return resultRows;
 	}
+	
+	public void test() {
+		System.out.println("ooooo");
+	}
 
 }
