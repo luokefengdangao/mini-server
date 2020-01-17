@@ -83,5 +83,10 @@
 		<module>mini-entites</module>
 		<module>ad-provider-8001</module>
 		<module>ad-consumer-dept-9001</module>
+		<module>menu-provider-7001</module>
+		<module>mini-common</module>
+		<module>menu-consumer-9002</module>
+		<module>good-provider-6001</module>
+		<module>good-consumer-9003</module>
 	</modules>
 </project>
