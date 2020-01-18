@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hdw.controller.BasicController;
+import com.hdw.entites.GoodEntity;
 import com.hdw.entites.IndexMenuGoodEntity;
 import com.hdw.good.service.GoodService;
+import com.hdw.result.ResultData;
 import com.hdw.result.ResultRows;
 
 @RestController
@@ -25,5 +27,12 @@ public class GoodController extends BasicController {
 		return this.createResultVO(rows);
 
 	}
+
+	@GetMapping("/getGoodById")
+	public ResultData<GoodEntity> getGoodById(Integer goodId) {
+		GoodEntity goodById = goodService.getGoodById(goodId);
+		return this.createResultData(goodById);
+	}
+
 
 }

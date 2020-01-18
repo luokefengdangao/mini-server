@@ -1,7 +1,9 @@
 package com.hdw.entites;
 
 import javax.persistence.Column;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import lombok.Data;
 
@@ -12,6 +14,7 @@ public class GoodEntity {
 	/**
 	 * 主键
 	 */
+	@Id
 	@Column(name = "goodid")
 	private Integer goodid;
 	
@@ -48,11 +51,19 @@ public class GoodEntity {
 	/**
 	 * 首页模块
 	 */
+	@Transient
 	private String menuCode;
 
 	/**
 	 * 首页模块去
 	 */
+	@Transient
 	private String menuName;
+	
+	/**
+	 * 商品详请图片
+	 */
+	@Column(name="goodsDetailImg")
+	private String goodsDetailImg;
 
 }

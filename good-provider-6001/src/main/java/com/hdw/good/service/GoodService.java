@@ -25,6 +25,15 @@ public interface GoodService {
 	
 	/**
 	 * 
+	 * getGoodById:根据主键查询商品信息
+	 * 
+	 * @param goodId
+	 * @return GoodEntity
+	 */
+	GoodEntity getGoodById(Integer goodId);
+
+	/**
+	 * 
 	 * listGood: 查询商品
 	 * 
 	 * @param goodEntity

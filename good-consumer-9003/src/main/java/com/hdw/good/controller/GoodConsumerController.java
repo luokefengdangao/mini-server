@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.hdw.entites.GoodEntity;
 import com.hdw.entites.IndexMenuGoodEntity;
+import com.hdw.result.ResultData;
 import com.hdw.result.ResultRows;
 
 @RestController
@@ -22,6 +24,13 @@ public class GoodConsumerController {
 	@GetMapping("/getIndexMenuGood")
 	public ResultRows<IndexMenuGoodEntity> getIndexMenuGood() {
 		return restTemplate.getForObject(URL_PREFIX + "getIndexMenuGood", ResultRows.class);
+	}
+
+	@SuppressWarnings("unchecked")
+	@GetMapping("/getGoodById")
+	public ResultData<GoodEntity> getGoodById(Integer goodId) {
+
+		return restTemplate.getForObject(URL_PREFIX + "getGoodById?goodId={goodId}", ResultData.class, goodId);
 	}
 
 }

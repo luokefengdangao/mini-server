@@ -45,5 +45,13 @@ public class GoodServiceImpl implements GoodService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public GoodEntity getGoodById(Integer goodId) {
+		GoodEntity paramEntity = new GoodEntity();
+		paramEntity.setGoodid(goodId);
+		GoodEntity goodEntity = mapper.selectByPrimaryKey(paramEntity);
+		return goodEntity;
+	}
 	
 }

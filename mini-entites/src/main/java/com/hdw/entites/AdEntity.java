@@ -4,7 +4,6 @@ package com.hdw.entites;
 import javax.persistence.Column;
 import javax.persistence.Table;
 
-
 import lombok.Data;
 
 /**
@@ -47,5 +46,11 @@ public class AdEntity {
 	 */
 	@Column(name="route")
 	private String route;
+
+	/**
+	 * 对应的商品id
+	 */
+	@Column(name = "goodid")
+	private Integer goodid;
 
 }
