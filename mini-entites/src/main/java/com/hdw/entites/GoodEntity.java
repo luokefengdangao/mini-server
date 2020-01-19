@@ -66,4 +66,6 @@ public class GoodEntity {
 	@Column(name="goodsDetailImg")
 	private String goodsDetailImg;
 
+	@Transient
+	private Integer totalNum;
 }

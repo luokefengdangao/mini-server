@@ -13,7 +13,6 @@ public class CardEntity {
 
 	@Id
 	@GeneratedValue(generator = "JDBC")
-
 	private Integer id;
 
 	@Column(name = "goodid")

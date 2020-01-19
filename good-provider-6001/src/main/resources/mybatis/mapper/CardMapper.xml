@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hdw.good.mapper.CardMapper">
+
+	<select id="selectCardGood" resultType="com.hdw.entites.GoodEntity">
+		SELECT
+		g.goodid,g.goodName,g.price,g.content,g.imgsrc,c.totalnum FROM
+		T_MINI_GOOD g
+		join T_MINI_CARD c on g.goodid=c.goodid
+		where 1=1 
+		<if test="userId !=null and userId !=''">
+		and c.userid=#{userId}
+		</if>
+
+	</select>
+
+
+</mapper>
